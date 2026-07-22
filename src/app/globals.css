@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme inline {
+  /* ----- FONTS VARIABLES ----- */
+  --font-autography: var(--font-autography-local);
+  --font-newspaper: var(--font-newspaper-local);
+
+  /* ----- COLOR VARIABLES ----- */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #FFF0F3;
+  --foreground: #FF758F;
+  --muted: #FFB3C1;
+  --primary: #590D22;
+  --secondary: #A4133C;
+  --accent: #FF4D6D;
+  --border: #800F2F;
+}
+
+/* ===== Web Development ===== */
+/* ----- Light mode ----- */
+html[data-theme="light"] [data-area="web"]{
+  --background: #FFF0F3;
+  --foreground: #FF758F;
+  --muted: #FFB3C1;
+  --primary: #590D22;
+  --secondary: #A4133C;
+  --accent: #FF4D6D;
+  --border: #800F2F
+}
+
+/* ----- Dark Mode -----*/
+html[data-theme="dark"] [data-area="web"]{
+  --background: #17070D;
+  --foreground: #FFE5EC;
+  --muted: #C98797;
+  --primary: #FF8FA3;
+  --secondary: #FF4D6D;
+  --accent: #FF758F;
+  --border: #8F2D4A;
+}
+
+/* ===== Game Development ===== */
+/* ----- Light mode ----- */
+html[data-theme="light"] [data-area="game"]{
+  --background: #E0FBFC;
+  --foreground: #253237;
+  --muted: #5C6B73;
+  --primary: #253237;
+  --secondary: #5C6B73;
+  --accent: #9DB4C0;
+  --border: #9DB4C0;
+}
+
+/* ----- Dark Mode -----*/
+html[data-theme="dark"] [data-area="game"]{
+  --background: #253237;
+  --foreground: #E0FBFC;
+  --muted: #9DB4C0;
+  --primary: #C2DFE3;
+  --secondary: #9DB4C0;
+  --accent: #E0FBFC;
+  --border: #5C6B73;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-newspaper-local), serif;
 }
