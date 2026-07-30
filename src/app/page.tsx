@@ -7,7 +7,7 @@ import WorkExperience from "@/components/sections/workExperience";
 
 export default function Home() {
   return (
-    <div className="w-full h-full bg-background">
+    <div className="w-full min-h-screen bg-background">
     	<Navbar />
 
 		{/* Name section */}
