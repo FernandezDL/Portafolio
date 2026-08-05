@@ -54,23 +54,23 @@ export default function Home() {
 				</div>
 
 				<div className="mt-4 flex space-x-4">
-					<p className="text-md w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p className="text-md w-1/2">I'm a Computer Science Engineering graduate with a full-stack and Game Development background. I enjoy translating design concepts into functional, polish, user-friendly applications.</p>
 			
 					<div className="w-1/2">
-						<p className="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p className="text-md">My background in development and digital design allows me to approach projects from both a technical and creative perspective. I care about clean implementation, performance, usability, scalability, and the small details that make a product feel complete</p>
 
 						<div className="flex w-full mt-6">
 							<div className="w-[35%]">
-								<p className="text-md text-center">BASED IN</p>
-								<p className="text-md font-bold text-center">Guatemala</p>
+								<p className="text-md font-extrabold text-center">BASED IN</p>
+								<p className="text-md font-medium text-center">Guatemala</p>
 							</div>
 							<div className="w-[40%]">
-								<p className="text-md text-center">AVAILABLE</p>
-								<p className="text-md font-bold text-center">Freelance & Contract</p>
+								<p className="text-md font-bold text-center">AVAILABILITY</p>
+								<p className="text-md font-medium text-center">Open to opportunities</p>
 							</div>
 							<div className="w-1/3">
-								<p className="text-md text-center">LANGUAGES</p>
-								<p className="text-md font-bold text-center">ES · EN</p>
+								<p className="text-md font-bold text-center">LANGUAGES</p>
+								<p className="text-md font-medium text-center">ES · EN</p>
 							</div>
 						</div>
 					</div>

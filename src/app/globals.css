@@ -7,6 +7,13 @@
   --font-autography: var(--font-autography-local);
   --font-newspaper: var(--font-newspaper-local);
 
+  /* ----- FONT WEIGHTS ----- */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 800;
+
   /* ----- COLOR VARIABLES ----- */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -16,11 +23,11 @@
   --color-accent: var(--accent);
   --color-border: var(--border);
 
-  /* Layout global */
+  /* ----- Layout global ----- */
   --container-content: 80rem; /* 1280px */
   --spacing-page: clamp(1.5rem, 5vw, 6rem);
 
-  /* Hover transitions */
+  /* ----- Hover transitions ----- */
   --hover-offset: -2px;
   --hover-duration: 180ms;
   --hover-ease: cubic-bezier(0.22, 1, 0.36, 1);
