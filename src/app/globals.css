@@ -15,6 +15,10 @@
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-border: var(--border);
+
+  /* Layout global */
+  --container-content: 80rem; /* 1280px */
+  --spacing-page: clamp(1.5rem, 5vw, 6rem);
 }
 
 :root {
