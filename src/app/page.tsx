@@ -79,7 +79,7 @@ export default function Home() {
 	  	</div>
 
 		{/* Skills Section */}
-		<div className="w-full p-10 m-5">
+		<div className="w-full p-10 my-5">
 			<div className="mx-auto max-w-content">
 				{/* Title */}
 				<div className="w-full flex items-center">
@@ -89,9 +89,10 @@ export default function Home() {
 				</div>
 
 				<div className="mt-4">
-					<Skills number={1} section="Frontend" skills={["React", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript"]} />
-					<Skills number={2} section="Backend" skills={["Node.js", "Express", "MongoDB", "PostgreSQL"]} />
-					<Skills number={3} section="Other" skills={["Git", "Docker", "AWS", "Figma"]} />
+					<Skills number={1} section="Front-end" skills={["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Angular", "Vue.js", "Tailwind CSS", "Bootstrap"]} />
+					<Skills number={2} section="Back-end" skills={["Node.js", "Express", "Python", "C#"]} />
+					<Skills number={3} section="Design" skills={["Adobe Photoshop", "Canva", "Figma"]} />
+					<Skills number={4} section="Tools & Workflow" skills={["GitHub", "Postman", "Microsoft 365", "Google Workspace"]} />
 				</div>
 			</div>
 	  	</div>
