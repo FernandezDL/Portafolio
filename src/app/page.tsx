@@ -19,17 +19,25 @@ export default function Home() {
 
 					<div className="w-full h-px bg-foreground m-4"></div>
 
-					<p className="text-sm font-light my-4 shrink-0">Web & Full Stack Developer</p>
+					<p className="text-sm font-light my-4 shrink-0">Full-Stack Developer</p>
 				</div>
 
 				<p className="text-8xl font-bold mt-4">Diana <br/> Fernández</p>
 
-				<div className="mt-4 flex justify-between items-center w-3/4">
-					<p className="text-md">Statement here</p>
+				<div className="mt-8 flex justify-between items-center w-3/4">
+					<p className="text-md w-[70%]">I'm a full-stack developer passionate about creating and bringing designs to life as faithfully as possible. I focus on visual detail, efficient implementation, and creating polished digital experiences that work as well as they look.</p>
 
-					<div className="flex space-x-4 items-end">
-						<button className="bg-primary text-background px-4 py-2">View Work</button>
-						<button className="border-2 border-primary text-primary text-background px-4 py-2">Contact</button>
+					<div className="flex space-x-4 items-end shrink-0">
+						<button className="border-2 border-primary bg-primary text-background px-4 py-2 cursor-pointer 
+						transition-[background-color, border-color, translate] duration-(--hover-duration) ease-(--hover-ease) 
+						hover:translate-y-(--hover-offset) hover:bg-secondary hover:border-secondary">
+							View Work
+						</button>
+						<button className="border-2 border-primary text-primary text-background px-4 py-2 cursor-pointer
+						transition-[background-color, border-color, translate] duration-(--hover-duration) ease-(--hover-ease)
+						hover:translate-y-(--hover-offset) hover:bg-secondary hover:border-secondary hover:text-white">
+							Contact
+						</button>
 					</div>
 				</div>
 			</div>
