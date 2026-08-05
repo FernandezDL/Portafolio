@@ -1,7 +1,7 @@
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import AcademicExperience from "@/components/sections/academicExperience";
-import Projects from "@/components/sections/projects";
+import Projects from "@/components/sections/Projects/project";
 import Skills from "@/components/sections/Skills";
 import WorkExperience from "@/components/sections/workExperience";
 
@@ -28,8 +28,8 @@ export default function Home() {
 					<p className="text-md w-[70%]">I'm a full-stack developer passionate about creating and bringing designs to life as faithfully as possible. I focus on visual detail, efficient implementation, and creating polished digital experiences that work as well as they look.</p>
 
 					<div className="flex space-x-4 items-end shrink-0">
-						<button className="border-2 border-primary bg-primary text-background px-4 py-2 cursor-pointer 
-						transition-[background-color, border-color, translate] duration-(--hover-duration) ease-(--hover-ease) 
+						<button className="border-2 border-primary bg-primary text-background px-4 py-2 cursor-pointer
+						transition-[background-color, border-color, translate] duration-(--hover-duration) ease-(--hover-ease)
 						hover:translate-y-(--hover-offset) hover:bg-secondary hover:border-secondary">
 							View Work
 						</button>
@@ -55,7 +55,7 @@ export default function Home() {
 
 				<div className="mt-4 flex space-x-4">
 					<p className="text-md w-1/2">I'm a Computer Science Engineering graduate with a full-stack and Game Development background. I enjoy translating design concepts into functional, polish, user-friendly applications.</p>
-			
+
 					<div className="w-1/2">
 						<p className="text-md">My background in development and digital design allows me to approach projects from both a technical and creative perspective. I care about clean implementation, performance, usability, scalability, and the small details that make a product feel complete</p>
 
@@ -108,11 +108,10 @@ export default function Home() {
 					<p className="text-sm font-light my-4 shrink-0">Selected Projects</p>
 				</div>
 
-{/* @TODO: Grid layout for projects */}
-				<div className="mt-4 flex space-x-4">		  
-					<Projects name="Project 1" description="Description of Project 1" image="/images/project1.png" tags={["React", "Next.js"]} year={2023} />
-					<Projects name="Project 2" description="Description of Project 2" image="/images/project2.png" tags={["React", "Next.js"]} year={2023} />
-					<Projects name="Project 3" description="Description of Project 3" image="/images/project3.png" tags={["React", "Next.js"]} year={2023} />
+				<div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+					<Projects name="Papercut" description="3D Bullet Hell Game" image="/Img/Papercut.png" tags={["Unity", "C#", "Photoshop", "GitHub", "Blender"]} year={2026} />
+					<Projects name="The Last Course" description="Top-Down Combat-Cooking Game" image="/Img/TheLastCourse.png" tags={["Unity", "C#", "GitHub"]} year={2026} />
+					<Projects name="Card-Jitsu Remake" description="Club Penguin's Game Remake" image="/Img/Cardjitsu.png" tags={["Python", "Photoshop", "Kivy"]} year={2023} />
 				</div>
 			</div>
 	  	</div>
@@ -128,9 +127,13 @@ export default function Home() {
 				</div>
 
 				<div className="mt-6 pl-4 border-l-2 border-primary ">
-					<WorkExperience company="Company 1" role="Role 1" startDate="Jan 2020" endDate="Dec 2020" description="Description of Role 1" />
-					<WorkExperience company="Company 2" role="Role 2" startDate="Jan 2021" endDate="Dec 2021" description="Description of Role 2" />
-					<WorkExperience company="Company 3" role="Role 3" startDate="Jan 2022" endDate="Dec 2022" description="Description of Role 3" />
+					<WorkExperience company="Papercut - Student Project" role="UI Artist - Techical Artist - 3D Prop Modeler" startDate="2026" description={["Responsible for 2D asset and graphic element creation", "Menu and UI implementation", "Creation and implementation of shaders and graphic elements", "3D prop modeling"]} />
+					<WorkExperience company="Universidad del Valle de Guatemala" role="Instructor" startDate="2026" description={["Instructor for the programming module of the “Women Creating Video Games” Certificate Program"]} />
+					<WorkExperience company="Cerial Killer Games" role="Game Developer" startDate="Nov 2025" endDate="Feb 2026" description={["Enemy AI Programmer"]} />
+					<WorkExperience company="Estudio Faser" role="Full-stack developer" startDate="2025" description={["Full-stack development", "API Development", "Database management"]} />
+					<WorkExperience company="Spring Bus" role="Front-end developer" startDate="2024" description={["Front-end development"]} />
+					<WorkExperience company="Universidad del Valle de Guatemala" role="Assistant Teacher" startDate="2023" endDate="2025" description={["Computer Organization and ASsembler", "Effective Communication", "Research and Scientific Thinking", "Web Systems and Technologies", "Artificial Intelligence", "Operative Systems"]} />
+					<WorkExperience company="Laudato Si' Movement" role="Database Developer" startDate="2023" endDate="2025" description={["Database planning", "Database development"]} />
 				</div>
 			</div>
 		</div>
@@ -144,11 +147,12 @@ export default function Home() {
 					<div className="w-full h-px bg-foreground m-4"></div>
 					<p className="text-sm font-light my-4 shrink-0">Academic Background</p>
 				</div>
-				
+
 				<div className="mt-6 pl-4 border-l-2 border-primary ">
-					<AcademicExperience institution="Institution 1" role="Role 1" startDate="Jan 2020" endDate="Dec 2020" description="Description of Role 1" />
-					<AcademicExperience institution="Institution 2" role="Role 2" startDate="Jan 2021" endDate="Dec 2021" description="Description of Role 2" />
-					<AcademicExperience institution="Institution 3" role="Role 3" startDate="Jan 2022" endDate="Dec 2022" description="Description of Role 3" />
+					<AcademicExperience institution="Vancouver Film School" program="Programming for Games, Mobile, and Web Development" startDate="Sep 2025" endDate="Aug 2026"/>
+					<AcademicExperience institution="Universidad del Valle de Guatemala" program="Bachelor's degree in Computer Science" startDate="Jan 2021" endDate="Dec 2021" />
+					<AcademicExperience institution="Unity Learn" program="Junior Programmer" startDate="2025"/>
+					<AcademicExperience institution="Instituto Tecnológico del SurOccidente" program="High School Diploma in Science and Humanities with a Focus on Computer Science" startDate="2005" endDate="2020" />
 				</div>
 			</div>
 		</div>
@@ -162,7 +166,7 @@ export default function Home() {
 					<div className="w-full h-px bg-foreground m-4"></div>
 					<p className="text-sm font-light my-4 shrink-0">Get in Touch</p>
 				</div>
-				
+
 				<div className="mt-4 flex">
 					<div className="w-1/2">
 						<p className="text-md">Open to full-time opportunities, freelance contracts, and consulting work.</p>
