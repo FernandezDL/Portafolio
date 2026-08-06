@@ -184,7 +184,7 @@ export const enContent: LocalizedPortfolioContent = {
             {number: 4, title: "Tools & Workflow", skills: ["GitHub", "Postman", "Microsoft 365", "Google Workspace"]}
         ],
         projects: [
-            {number: 1, title: "Papercut", description:"3D Bullet Hell Game", image: "/Img/Papercut.png", tags: ["Unity", "C#", "Photoshop", "GitHub", "Blender"], year: 2026},
+            {number: 1, title: "Papercut", description:"3D Bullet Hell Game", image: "/Img/papercut.png", tags: ["Unity", "C#", "Photoshop", "GitHub", "Blender"], year: 2026},
             {number: 2, title: "The Last Course", description:"Top-Down Combat-Cooking Game", image: "/Img/TheLastCourse.png", tags: ["Unity", "C#", "GitHub"], year: 2026},
             {number: 3, title: "Card-Jitsu Remake", description:"Club Penguin's Game Remake", image: "/Img/Cardjitsu.png", tags: ["Python", "Photoshop", "Kivy"], year: 2023}
         ],
