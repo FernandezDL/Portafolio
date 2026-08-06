@@ -5,10 +5,10 @@ import Link from "next/link";
 import {Disclosure, DisclosureButton, DisclosurePanel} from "@headlessui/react";
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 import NavbarSwitch from "@/components/sections/NavbarSwitch";
+import { useParams, useRouter } from "next/navigation";
+import type { PortfolioLang, PortfolioType } from "@/types/types";
 
-type Area = "web" | "game";
 type Theme = "light" | "dark";
-type Language = "en" | "es";
 
 const navigation = [
     { name: "About me", href: "#about" },
@@ -19,11 +19,51 @@ const navigation = [
 ];
 
 export default function Navbar() {
-    const [area, setArea] = useState<Area>("web");
     const [theme, setTheme] = useState<Theme>("light");
-    const [language, setLanguage] = useState<Language>("en");
+    const params = useParams<{ lang: PortfolioLang; mode: PortfolioType }>();
+    const router = useRouter();
+
+    const language: PortfolioLang = params.lang === "es" ? "es" : "en";
+    const area: PortfolioType =  params.mode === "games" ? "games" : "web";
     const [hasScrolled, setHasScrolled] = useState<boolean>(false);
-    
+
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("theme");
+
+        const initialTheme: Theme =
+            savedTheme === "dark" ? "dark" : "light";
+
+        setTheme(initialTheme);
+        document.documentElement.dataset.theme = initialTheme;
+    }, []);
+
+    function changePortfolioRoute(nextLanguage: PortfolioLang, nextArea: PortfolioType) {
+        const currentSection = window.location.hash;
+
+        router.replace(`/${nextLanguage}/${nextArea}${currentSection}`, { scroll: false });
+    }
+
+    function toggleArea() {
+        const nextArea: PortfolioType = area === "web" ? "games" : "web";
+
+        changePortfolioRoute(language, nextArea);
+    }
+
+    function toggleTheme() {
+    const nextTheme: Theme =
+        theme === "light" ? "dark" : "light";
+
+    setTheme(nextTheme);
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem("theme", nextTheme);
+}
+
+    function toggleLanguage() {
+        const nextLanguage: PortfolioLang = language === "en" ? "es" : "en";
+
+        changePortfolioRoute(nextLanguage, area);
+    }
+
     useEffect(()=>{
         const handleScroll = ()=>{
             setHasScrolled(window.scrollY >= 80);
@@ -38,36 +78,17 @@ export default function Navbar() {
         }
     }, []);
 
-    function toggleArea() {
-        const nextArea: Area = area === "web" ? "game" : "web";
-
-        setArea(nextArea);
-
-        document.body.dataset.area = nextArea;
-    }
-
-    function toggleTheme() {
-        const nextTheme: Theme = theme === "light" ? "dark" : "light";
-
-        setTheme(nextTheme);
-
-        document.documentElement.dataset.theme = nextTheme;
-    }
-
-    function toggleLanguage() {
-        const nextLanguage: Language = language === "en" ? "es" : "en";
-
-        setLanguage(nextLanguage);
-
-        document.documentElement.lang = nextLanguage;
-    }
+    useEffect(() => {
+        document.body.dataset.area = area;
+        document.documentElement.lang = language;
+    }, [area, language]);
 
     return (
         <Disclosure as="nav" className={`sticky top-0 text-foreground ${hasScrolled ? "bg-muted opacity-85" : ""}`}>
             <div className={`mx-auto max-w-screen-2xl sticky top-0 px-5 ${hasScrolled ? "bg-muted opacity-85" : ""} sm:px-8`}>
                 <div className="flex h-20 items-center justify-between sticky top-0 ">
                     {/* Logo */}
-                    <Link href="/" className="shrink-0 font-newspaper text-xl font-bold text-primary">
+                    <Link href={`/${language}/${area}`} className="shrink-0 font-newspaper text-xl font-bold text-primary">
                         {/* @TODO: change to logo */}
                         DF.
                     </Link>
@@ -88,7 +109,7 @@ export default function Navbar() {
                         <NavbarSwitch
                             leftLabel="Web"
                             rightLabel="Game"
-                            checked={area === "game"}
+                            checked={area === "games"}
                             onChange={toggleArea}
                             ariaLabel="Switch development area"
                             hasScrolled={hasScrolled}
@@ -154,7 +175,7 @@ export default function Navbar() {
                     <NavbarSwitch
                         leftLabel="Web"
                         rightLabel="Game"
-                        checked={area === "game"}
+                        checked={area === "games"}
                         hasScrolled={hasScrolled}
                         onChange={toggleArea}
                         ariaLabel="Switch development area"

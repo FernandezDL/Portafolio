@@ -1,28 +1,42 @@
+import { Experience } from "@/types/types";
+
 type WorkExperienceProps = {
-    company: string;
-    role: string;
-    startDate: string;
-    endDate?: string;
-    description: string[];
+    workExperienceList: Experience[];
 };
 
-export default function WorkExperience({company, role, startDate, endDate, description}: WorkExperienceProps) {
-    return(
-        <div className="w-2/3 mb-6">
-            <div className="w-full flex justify-between items-center">
-                <h3 className="text-lg font-bold">{role}</h3>
-                <p className="text-sm">{startDate} {endDate && ` - ${endDate}`}</p>
-            </div>
+export default function WorkExperience({workExperienceList}: WorkExperienceProps) {
+    return (
+        <div className="w-full">
+            {workExperienceList.map((experience) => (
+                <div
+                    key={`${experience.company}-${experience.position}-${experience.startDate}`}
+                    className="mb-6 w-2/3"
+                >
+                    <div className="flex w-full items-center justify-between">
+                        <h3 className="text-lg font-bold">
+                            {experience.position}
+                        </h3>
 
-            <p className="text-md">{company}</p>
+                        <p className="text-sm">
+                            {experience.startDate}
+                            {experience.endDate && ` - ${experience.endDate}`}
+                        </p>
+                    </div>
 
-            <div className="mt-4">
-                {description.map((desc) => (
-                    <p key={desc} className="text-md">
-                        - {desc}
-                    </p>
-                ))}
-            </div>
+                    <p className="text-md">{experience.company}</p>
+
+                    <div className="mt-4">
+                        {experience.description.map((description) => (
+                            <p
+                                key={description}
+                                className="text-md"
+                            >
+                                - {description}
+                            </p>
+                        ))}
+                    </div>
+                </div>
+            ))}
         </div>
-    )
+    );
 }

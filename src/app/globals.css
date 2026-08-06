@@ -68,7 +68,7 @@ html[data-theme="dark"] [data-area="web"]{
 
 /* ===== Game Development ===== */
 /* ----- Light mode ----- */
-html[data-theme="light"] [data-area="game"]{
+html[data-theme="light"] [data-area="games"]{
   --background: #E0FBFC;
   --foreground: #253237;
   --muted: #5C6B73;
@@ -79,7 +79,7 @@ html[data-theme="light"] [data-area="game"]{
 }
 
 /* ----- Dark Mode -----*/
-html[data-theme="dark"] [data-area="game"]{
+html[data-theme="dark"] [data-area="games"]{
   --background: #253237;
   --foreground: #E0FBFC;
   --muted: #9DB4C0;
