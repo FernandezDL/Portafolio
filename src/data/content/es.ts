@@ -187,7 +187,7 @@ export const esContent: LocalizedPortfolioContent = {
         ],
 
 		projects: [
-            {number: 1, title: "Papercut", description:"Juego 3D de tipo 'Bullet-Hell'", image: "/Img/papercut.png", tags: ["Unity", "C#", "Photoshop", "GitHub", "Blender"], year: 2026},
+            {number: 1, title: "Papercut", description:"Juego 3D de tipo 'Bullet-Hell'", image: "/Img/Papercut.png", tags: ["Unity", "C#", "Photoshop", "GitHub", "Blender"], year: 2026},
             {number: 2, title: "The Last Course", description:"Juego de combate y cocina Top-Down", image: "/Img/TheLastCourse.png", tags: ["Unity", "C#", "GitHub"], year: 2026},
             {number: 3, title: "Card-Jitsu Remake", description:"Remake del juego de Club Penguin", image: "/Img/Cardjitsu.png", tags: ["Python", "Photoshop", "Kivy"], year: 2023}
         ],

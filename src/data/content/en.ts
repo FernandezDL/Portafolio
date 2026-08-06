@@ -36,7 +36,7 @@ export const enContent: LocalizedPortfolioContent = {
                 ariaLabel: "Switch language",
             },
         },
-        
+
         nameSection: {
             role: "Full-Stack Developer",
             statement: "I'm a full-stack developer passionate about creating and bringing designs to life as faithfully as possible. I focus on visual detail, efficient implementation, and creating polished digital experiences that work as well as they look.",
@@ -184,7 +184,7 @@ export const enContent: LocalizedPortfolioContent = {
             {number: 4, title: "Tools & Workflow", skills: ["GitHub", "Postman", "Microsoft 365", "Google Workspace"]}
         ],
         projects: [
-            {number: 1, title: "Papercut", description:"3D Bullet Hell Game", image: "/Img/papercut.png", tags: ["Unity", "C#", "Photoshop", "GitHub", "Blender"], year: 2026},
+            {number: 1, title: "Papercut", description:"3D Bullet Hell Game", image: "/Img/Papercut.png", tags: ["Unity", "C#", "Photoshop", "GitHub", "Blender"], year: 2026},
             {number: 2, title: "The Last Course", description:"Top-Down Combat-Cooking Game", image: "/Img/TheLastCourse.png", tags: ["Unity", "C#", "GitHub"], year: 2026},
             {number: 3, title: "Card-Jitsu Remake", description:"Club Penguin's Game Remake", image: "/Img/Cardjitsu.png", tags: ["Python", "Photoshop", "Kivy"], year: 2023}
         ],
