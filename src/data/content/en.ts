@@ -11,6 +11,32 @@ export const enContent: LocalizedPortfolioContent = {
     },
 
     web: {
+        navigation: {
+            about: "About",
+            skills: "Skills",
+            projects: "Projects",
+            experience: "Experience",
+            contact: "Contact",
+        },
+
+        navbarSwitches: {
+            area: {
+                leftLabel: "Web",
+                rightLabel: "Games",
+                ariaLabel: "Switch development area",
+            },
+            theme: {
+                leftLabel: "Light",
+                rightLabel: "Dark",
+                ariaLabel: "Switch color theme",
+            },
+            language: {
+                leftLabel: "En",
+                rightLabel: "Es",
+                ariaLabel: "Switch language",
+            },
+        },
+        
         nameSection: {
             role: "Full-Stack Developer",
             statement: "I'm a full-stack developer passionate about creating and bringing designs to life as faithfully as possible. I focus on visual detail, efficient implementation, and creating polished digital experiences that work as well as they look.",
@@ -83,6 +109,32 @@ export const enContent: LocalizedPortfolioContent = {
     }, 
 
     games: {
+        navigation: {
+            about: "About",
+            skills: "Skills",
+            projects: "Projects",
+            experience: "Experience",
+            contact: "Contact",
+        },
+
+        navbarSwitches: {
+            area: {
+                leftLabel: "Web",
+                rightLabel: "Games",
+                ariaLabel: "Switch development area",
+            },
+            theme: {
+                leftLabel: "Light",
+                rightLabel: "Dark",
+                ariaLabel: "Switch color theme",
+            },
+            language: {
+                leftLabel: "En",
+                rightLabel: "Es",
+                ariaLabel: "Switch language",
+            },
+        },
+        
         nameSection: {
             role: "Game Developer",
             statement: "I'm a full-stack developer passionate about creating and bringing designs to life as faithfully as possible. I focus on visual detail, efficient implementation, and creating polished digital experiences that work as well as they look.",

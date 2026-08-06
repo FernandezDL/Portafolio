@@ -11,6 +11,32 @@ export const esContent: LocalizedPortfolioContent = {
   	},
 
 	web: {
+		navigation: {
+			about: "Sobre mí",
+			skills: "Habilidades",
+			projects: "Proyectos",
+			experience: "Experiencia",
+			contact: "Contacto",
+		},
+
+		navbarSwitches: {
+			area: {
+				leftLabel: "Web",
+				rightLabel: "Juegos",
+				ariaLabel: "Cambiar área de desarrollo",
+			},
+			theme: {
+				leftLabel: "Claro",
+				rightLabel: "Oscuro",
+				ariaLabel: "Cambiar tema de color",
+			},
+			language: {
+				leftLabel: "En",
+				rightLabel: "Es",
+				ariaLabel: "Cambiar idioma",
+			},
+		},
+
 		nameSection: {
 			role: "Desarrolladora Full-Stack",
             statement: "Soy una desarrolladora full-stack a quien le apasiona crear y ejecutar diseños de la forma más fiel posible a la visión original. Me centro en los detalles visuales, en una implementación eficiente y en crear experiencias digitales pulidas que funcionen tan bien como se ven.",
@@ -85,6 +111,32 @@ export const esContent: LocalizedPortfolioContent = {
 	},
 
 	games: {
+		navigation: {
+			about: "Sobre mí",
+			skills: "Habilidades",
+			projects: "Proyectos",
+			experience: "Experiencia",
+			contact: "Contacto",
+		},
+
+		navbarSwitches: {
+			area: {
+				leftLabel: "Web",
+				rightLabel: "Juegos",
+				ariaLabel: "Cambiar área de desarrollo",
+			},
+			theme: {
+				leftLabel: "Claro",
+				rightLabel: "Oscuro",
+				ariaLabel: "Cambiar tema de color",
+			},
+			language: {
+				leftLabel: "En",
+				rightLabel: "Es",
+				ariaLabel: "Cambiar idioma",
+			},
+		},
+		
 		nameSection: {
             role: "Desarrolladora de Videojuegos",
             statement: "Soy una desarrolladora full-stack a quien le apasiona crear y ejecutar diseños de la forma más fiel posible a la visión original. Me centro en los detalles visuales, en una implementación eficiente y en crear experiencias digitales pulidas que funcionen tan bien como se ven.",

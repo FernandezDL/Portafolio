@@ -77,6 +77,9 @@ export type Section = {
 }
 
 export type PortfolioContent = {
+  navigation: NavigationContent;
+  navbarSwitches: NavbarSwitchContent;
+
   about: About;
   sections: Section[];
   skills: Skill[];
@@ -92,4 +95,24 @@ export type LocalizedPortfolioContent = {
   navigation: Navigation;
   web: PortfolioContent;
   games: PortfolioContent;
+};
+
+export type NavigationContent = {
+  about: string;
+  skills: string;
+  projects: string;
+  experience: string;
+  contact: string;
+};
+
+export type SwitchContent = {
+  leftLabel: string;
+  rightLabel: string;
+  ariaLabel: string;
+};
+
+export type NavbarSwitchContent = {
+  area: SwitchContent;
+  theme: SwitchContent;
+  language: SwitchContent;
 };

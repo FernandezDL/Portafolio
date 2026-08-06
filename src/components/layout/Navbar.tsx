@@ -6,19 +6,15 @@ import {Disclosure, DisclosureButton, DisclosurePanel} from "@headlessui/react";
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 import NavbarSwitch from "@/components/sections/NavbarSwitch";
 import { useParams, useRouter } from "next/navigation";
-import type { PortfolioLang, PortfolioType } from "@/types/types";
+import type { PortfolioLang, PortfolioType, NavigationContent, NavbarSwitchContent } from "@/types/types";
 
 type Theme = "light" | "dark";
+type NavbarProps = {
+    navigation: NavigationContent;
+    navbarSwitches: NavbarSwitchContent;
+};
 
-const navigation = [
-    { name: "About me", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
-];
-
-export default function Navbar() {
+export default function Navbar({navigation, navbarSwitches}: NavbarProps) {
     const [theme, setTheme] = useState<Theme>("light");
     const params = useParams<{ lang: PortfolioLang; mode: PortfolioType }>();
     const router = useRouter();
@@ -26,6 +22,14 @@ export default function Navbar() {
     const language: PortfolioLang = params.lang === "es" ? "es" : "en";
     const area: PortfolioType =  params.mode === "games" ? "games" : "web";
     const [hasScrolled, setHasScrolled] = useState<boolean>(false);
+
+    const navigationItems = [
+        {name: navigation.about, href: "#about",},
+        {name: navigation.skills, href: "#skills",},
+        {name: navigation.projects, href: "#projects",},
+        {name: navigation.experience, href: "#experience",},
+        {name: navigation.contact, href: "#contact",},
+    ];
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
@@ -95,7 +99,7 @@ export default function Navbar() {
 
                     {/* Desktop navigation */}
                     <div className="hidden items-center gap-8 lg:flex">
-                        {navigation.map((item) => (
+                        {navigationItems.map((item) => (
                             <Link className={`font-newspaper text-s tracking-[0.12em]  uppercase ${hasScrolled ? "text-white" : "text-muted"}
                                   transition-colors hover:text-primary`} key={item.name} href={item.href}
                             >
@@ -107,8 +111,8 @@ export default function Navbar() {
                     {/* Desktop switches */}
                     <div className="hidden items-center gap-5 font-newspaper text-xs tracking-[0.16em] uppercase xl:flex">
                         <NavbarSwitch
-                            leftLabel="Web"
-                            rightLabel="Game"
+                            leftLabel={navbarSwitches.area.leftLabel}
+                            rightLabel={navbarSwitches.area.rightLabel}
                             checked={area === "games"}
                             onChange={toggleArea}
                             ariaLabel="Switch development area"
@@ -118,8 +122,8 @@ export default function Navbar() {
                         <span aria-hidden="true" className="h-7 w-px bg-border"/> 
 
                         <NavbarSwitch
-                            leftLabel="Light"
-                            rightLabel="Dark"
+                            leftLabel={navbarSwitches.theme.leftLabel}
+                            rightLabel={navbarSwitches.theme.rightLabel}
                             checked={theme === "dark"}
                             onChange={toggleTheme}
                             ariaLabel="Switch color theme"
@@ -129,8 +133,8 @@ export default function Navbar() {
                         <span aria-hidden="true" className="h-7 w-px bg-border"/>
 
                         <NavbarSwitch
-                            leftLabel="En"
-                            rightLabel="Es"
+                            leftLabel={navbarSwitches.language.leftLabel}
+                            rightLabel={navbarSwitches.language.rightLabel}
                             checked={language === "es"}
                             onChange={toggleLanguage}
                             ariaLabel="Switch language"
@@ -155,7 +159,7 @@ export default function Navbar() {
             {/* Mobile panel */}
             <DisclosurePanel className="border-t border-border bg-background px-5 py-5 lg:hidden">
                 <div className="space-y-1">
-                    {navigation.map((item) => (
+                    {navigationItems.map((item) => (
                         <DisclosureButton
                             key={item.name}
                             as="a"

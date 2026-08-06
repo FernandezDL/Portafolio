@@ -37,7 +37,7 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 
   return (
     <main className="w-full min-h-screen bg-background">
-		<Navbar/>
+		<Navbar navigation={portfolioContent.navigation} navbarSwitches={portfolioContent.navbarSwitches}/>
 
 		{/* Name section */}
 		<section id="header" className="scroll-mt-0">
@@ -52,7 +52,7 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 						<p className="text-sm font-light my-4 shrink-0">{portfolioContent.nameSection.role}</p>
 					</div>
 
-					<p className="text-8xl font-bold mt-4">Diana <br/> Fernández</p>
+					<p className="text-8xl font-bold mt-4">Diana Lucía <br/> Fernández Villatoro</p>
 
 					<div className="mt-8 flex justify-between items-center w-3/4">
 						<p className="text-md w-[70%]">{portfolioContent.nameSection.statement}</p>
