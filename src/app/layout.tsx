@@ -14,15 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 const OldNewspaper = localFont({
-  src: "../../public/fonts/OldNewspaperTypes.ttf",
-  variable: "--font-newspaper-local",
-  display: "swap"
+    src: "../../public/Fonts/OldNewspaperTypes.ttf",
+    variable: "--font-newspaper-local",
+    display: "swap",
 });
 
 const Autography = localFont({
-  src: "../../public/fonts/Autography.otf",
-  variable: "--font-autography-local",
-  display: "swap"
+    src: "../../public/Fonts/Autography.otf",
+    variable: "--font-autography-local",
+    display: "swap",
 });
 
 export const metadata: Metadata = {
