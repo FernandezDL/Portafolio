@@ -6,17 +6,17 @@ type FooterProps = {
 
 export default function Footer({ footerSection }: FooterProps) {
     return(
-        <div className="w-full p-10 mt-5 bg-muted flex">
-            <div className="w-1/3"></div>
+        <div className="w-full p-3 lg:p-10 mt-5 bg-muted flex">
+            <div className="w-0 lg:w-1/3"></div>
 
-            <div className="w-1/3 flex flex-col items-center">
-                <p>{footerSection.madeBy} ♡ by Diana Fernandez</p>
-                <p>© 2026</p>
+            <div className="w-1/2 lg:w-1/3 flex flex-col items-center">
+                <p className="text-xs lg:text-md">{footerSection.madeBy} ♡ by Diana Fernandez</p>
+                <p className="text-xs lg:text-md">© 2026</p>
             </div>
 
-            <div className="w-1/3 flex items-center justify-end">
+            <div className="w-1/2 lg:w-1/3 flex items-center justify-end">
                 {/* @TODO: Cambiar a boton */}
-                <button className="font-bold text-end cursor-pointer">{footerSection.button} →</button>
+                <button className=" text-xs lg:text-lg font-bold text-end cursor-pointer">{footerSection.button} →</button>
             </div>
         </div>
     )

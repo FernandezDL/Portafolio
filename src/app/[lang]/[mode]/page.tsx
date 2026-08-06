@@ -51,24 +51,24 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 		<Navbar navigation={portfolioContent.navigation} navbarSwitches={portfolioContent.navbarSwitches}/>
 
 		{/* Name section */}
-		<section id="header" className="scroll-mt-0">
-			<div className="w-full p-10 mt-5 mx-auto">
+		<section id="header" className="scroll-mt-24 px-5 sm:px-8 lg:px-10 lg:py-16">
+			<div className="w-full p-2 lg:p-10 mt-5 mx-auto">
 				<div className="mx-auto max-w-content">
 					{/* Title */}
 					<div className="w-full flex items-center">
-						<p className="text-sm font-light my-4 shrink-0">{lang === "en" ? "Portfolio" : "Portafolio"}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">{lang === "en" ? "Portfolio" : "Portafolio"}</p>
 
 						<div className="w-full h-px bg-foreground m-4"></div>
 
-						<p className="text-sm font-light my-4 shrink-0">{portfolioContent.nameSection.role}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">{portfolioContent.nameSection.role}</p>
 					</div>
 
-					<p className="text-8xl font-bold mt-4">Diana Lucía <br/> Fernández Villatoro</p>
+					<p className="text-3xl lg:text-8xl font-bold mt-4">Diana Lucía <br/> Fernández Villatoro</p>
 
-					<div className="mt-8 flex justify-between items-center w-3/4">
-						<p className="text-md w-[70%]">{portfolioContent.nameSection.statement}</p>
+					<div className="mt-8 lg:flex justify-between items-center w-full lg:w-3/4">
+						<p className="text-sm lg:text-md w-full lg:w-[70%]">{portfolioContent.nameSection.statement}</p>
 
-						<div className="flex space-x-4 items-end shrink-0">
+						<div className="flex space-x-4 items-end shrink-0 mt-5 lg:mt-0">
 							<NavButton text={portfolioContent.nameSection.contactButton} section="#contact" />
 							<NavButtonSec text={portfolioContent.nameSection.viewWorkButton} section="#projects" />
 						</div>
@@ -79,33 +79,33 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 
 		{/* About Section */}
 		<section id="about">
-			<div className="w-full bg-muted py-10 my-5">
+			<div className="w-full bg-muted p-2 py-5 lg:py-10 lg:my-5">
 				<div className="mx-auto max-w-content">
 					{/* Title */}
-					<div className="w-full flex items-center">
-						<p className="text-sm font-light my-4 shrink-0">01 - {portfolioContent.sections[0].header}</p>
+					<div className="px-5 lg:px-0 w-full flex items-center">
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">01 - {portfolioContent.sections[0].header}</p>
 						<div className="w-full h-px bg-foreground m-4"></div>
-						<p className="text-sm font-light my-4 shrink-0">{portfolioContent.sections[0].title}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">{portfolioContent.sections[0].title}</p>
 					</div>
 
-					<div className="mt-4 flex space-x-4">
-						<p className="text-md w-1/2">{portfolioContent.about.introduction}</p>
+					<div className="mt-4 px-5 space-y-4 lg:px-0 lg:flex lg:space-x-4">
+						<p className="text-sm lg:text-md w-full lg:w-1/2">{portfolioContent.about.introduction}</p>
 
-						<div className="w-1/2">
-							<p className="text-md">{portfolioContent.about.approach}</p>
+						<div className="w-full lg:w-1/2">
+							<p className="text-sm lg:text-md">{portfolioContent.about.approach}</p>
 
-							<div className="flex w-full mt-6">
-								<div className="w-[35%]">
-									<p className="text-md font-extrabold text-center">{portfolioContent.about.basedIn}</p>
-									<p className="text-md font-medium text-center">Guatemala</p>
+							<div className="space-y-4 lg:flex w-full mt-6">
+								<div className="w-full lg:w-[35%]">
+									<p className="text-sm lg:text-md font-extrabold lg:text-center">{portfolioContent.about.basedIn}</p>
+									<p className="text-sm lg:text-md font-medium lg:text-center">Guatemala</p>
 								</div>
-								<div className="w-[40%]">
-									<p className="text-md font-bold text-center">{portfolioContent.about.availability}</p>
-									<p className="text-md font-medium text-center">{portfolioContent.about.oportunities}</p>
+								<div className="w-full lg:w-[40%]">
+									<p className="text-sm lg:text-md font-bold lg:text-center">{portfolioContent.about.availability}</p>
+									<p className="text-sm lg:text-md font-medium lg:text-center">{portfolioContent.about.oportunities}</p>
 								</div>
-								<div className="w-1/3">
-									<p className="text-md font-bold text-center">{portfolioContent.about.languages}</p>
-									<p className="text-md font-medium text-center">ES · EN</p>
+								<div className="w-full lg:w-1/3">
+									<p className="text-sm lg:text-md font-bold lg:text-center">{portfolioContent.about.languages}</p>
+									<p className="text-sm lg:text-md font-medium lg:text-center">ES · EN</p>
 								</div>
 							</div>
 						</div>
@@ -116,13 +116,13 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 
 		{/* Skills Section */}
 		<section id="skills">
-			<div className="w-full p-10 my-5">
+			<div className="w-full p-2 py-5 lg:p-10 lg:my-5">
 				<div className="mx-auto max-w-content">
 					{/* Title */}
-					<div className="w-full flex items-center">
-						<p className="text-sm font-light my-4 shrink-0">02 - {portfolioContent.sections[1].header}</p>
+					<div className="px-5 lg:px-0 w-full flex items-center">
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">02 - {portfolioContent.sections[1].header}</p>
 						<div className="w-full h-px bg-foreground m-4"></div>
-						<p className="text-sm font-light my-4 shrink-0">{portfolioContent.sections[1].title}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">{portfolioContent.sections[1].title}</p>
 					</div>
 
 					<div className="mt-4">
@@ -134,13 +134,13 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 
 		{/* Projects */}
 		<section id="projects">
-			<div className="w-full bg-muted p-10 my-5">
+			<div className="w-full bg-muted p-5 lg:p-10 my-5">
 				<div className="mx-auto max-w-content">
 					{/* Title */}
 					<div className="w-full flex items-center">
-						<p className="text-sm font-light my-4 shrink-0">03 - {portfolioContent.sections[2].header}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">03 - {portfolioContent.sections[2].header}</p>
 						<div className="w-full h-px bg-foreground m-4"></div>
-						<p className="text-sm font-light my-4 shrink-0">{portfolioContent.sections[2].title}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">{portfolioContent.sections[2].title}</p>
 					</div>
 
 					<Projects projectList={portfolioContent.projects} />
@@ -150,16 +150,16 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 
 		{/* Experience */}
 		<section id="experience">
-			<div className="w-full p-10 my-5">
+			<div className="w-full p-5 lg:p-10 my-5">
 				<div className="mx-auto max-w-content">
 					{/* Title */}
 					<div className="w-full flex items-center">
-						<p className="text-sm font-light my-4 shrink-0">04 - {portfolioContent.sections[3].header}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">04 - {portfolioContent.sections[3].header}</p>
 						<div className="w-full h-px bg-foreground m-4"></div>
-						<p className="text-sm font-light my-4 shrink-0">{portfolioContent.sections[3].title}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">{portfolioContent.sections[3].title}</p>
 					</div>
 
-					<div className="mt-6 ml-10 pl-4 border-l-2 border-primary ">
+					<div className="mt-6 ml-2 lg:ml-10 pl-4 border-l-2 border-primary ">
 						<WorkExperience workExperienceList={portfolioContent.workExperience} />
 					</div>
 				</div>
@@ -167,16 +167,16 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 		</section>
 
 		{/* Academic Experience */}
-		<div className="w-full p-10 my-5 bg-muted">
+		<div className="w-full p-5 lg:p-10 my-5 bg-muted">
 			<div className="mx-auto max-w-content">
 				{/* Title */}
 				<div className="w-full flex items-center">
-					<p className="text-sm font-light my-4 shrink-0">05 - {portfolioContent.sections[4].header}</p>
+					<p className="text-xs lg:text-sm font-light my-4 shrink-0">05 - {portfolioContent.sections[4].header}</p>
 					<div className="w-full h-px bg-foreground m-4"></div>
-					<p className="text-sm font-light my-4 shrink-0">{portfolioContent.sections[4].title}</p>
+					<p className="text-xs lg:text-sm font-light my-4 shrink-0">{portfolioContent.sections[4].title}</p>
 				</div>
 
-				<div className="mt-6 ml-10 pl-4 border-l-2 border-primary ">
+				<div className="mt-6 ml-2 lg:ml-10 pl-4 border-l-2 border-primary ">
 					<AcademicExperience academicExperienceList={portfolioContent.academicExperience} />
 				</div>
 			</div>
@@ -184,18 +184,18 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 
 		{/* Contact */}
 		<section id="contact">
-			<div className="w-full p-10 my-5">
+			<div className="w-full p-5 lg:p-10 my-5">
 				<div className="mx-auto max-w-content">
 					{/* Title */}
 					<div className="w-full flex items-center">
-						<p className="text-sm font-light my-4 shrink-0">06 - {portfolioContent.sections[5].header}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">06 - {portfolioContent.sections[5].header}</p>
 						<div className="w-full h-px bg-foreground m-4"></div>
-						<p className="text-sm font-light my-4 shrink-0">{portfolioContent.sections[5].title}</p>
+						<p className="text-xs lg:text-sm font-light my-4 shrink-0">{portfolioContent.sections[5].title}</p>
 					</div>
 
-					<div className="mt-4 flex">
-						<div className="w-1/2">
-							<p className="text-md">{portfolioContent.contactSection.text}</p>
+					<div className="mt-4 lg:flex">
+						<div className="w-full lg:w-1/2">
+							<p className="text-xs lg:text-md">{portfolioContent.contactSection.text}</p>
 
 							<div className="flex space-x-2">
 								<p className="text-md font-bold">Email:</p>
@@ -212,7 +212,7 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 								<p className="text-md">(+502) 4023-8478</p>
 							</div>
 						</div>
-						<div className="w-1/2 justify-end">
+						<div className="w-full mt-4 lg:mt-0 lg:w-1/2 justify-end">
 							<p className="text-md">{portfolioContent.contactSection.name}:</p>
 							<input type="text" className="border-2 border-primary px-2 py-1 w-full" />
 
@@ -222,7 +222,7 @@ export default async function PortfolioPage({params}: PortfolioPageProps) {
 							<p className="text-md mt-4">{portfolioContent.contactSection.message}:</p>
 							<textarea className="border-2 border-primary px-2 py-1 w-full" />
 
-							<button className="bg-primary text-background px-4 py-2 mt-4 w-1/4">{portfolioContent.contactSection.button}</button>
+							<button className="bg-primary text-background px-4 py-2 mt-4 lg:w-1/4">{portfolioContent.contactSection.button}</button>
 						</div>
 					</div>
 				</div>
