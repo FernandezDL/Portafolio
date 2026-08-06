@@ -10,11 +10,10 @@
 export default function NavbarSwitch({leftLabel, rightLabel, checked, onChange, ariaLabel, hasScrolled}: NavbarSwitchProps) {
     return (
         <div className="flex items-center gap-2">
-            <span
-                className={`${checked ? "font-bold" : ""}
+            <span className={`${checked ? "font-bold" : ""}
                     ${hasScrolled 
                         ? checked 
-                            ? "text-primary" 
+                            ? "text-foreground" 
                             : "text-white"
                         : checked
                             ? "text-muted"
@@ -33,7 +32,16 @@ export default function NavbarSwitch({leftLabel, rightLabel, checked, onChange, 
                 />
             </button>
 
-            <span className={checked ? "text-foreground" : "text-muted"}>
+            <span className={`${checked ? "font-bold" : ""}
+                    ${hasScrolled 
+                        ? checked 
+                            ? "text-white"
+                            : "text-foreground"
+                        : checked
+                            ? "text-foreground" 
+                            : "text-muted"
+                    }
+                `}>
                 {rightLabel}
             </span>
         </div>

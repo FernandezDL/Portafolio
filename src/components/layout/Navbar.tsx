@@ -155,6 +155,7 @@ export default function Navbar() {
                         leftLabel="Web"
                         rightLabel="Game"
                         checked={area === "game"}
+                        hasScrolled={hasScrolled}
                         onChange={toggleArea}
                         ariaLabel="Switch development area"
                     />
@@ -163,6 +164,7 @@ export default function Navbar() {
                         leftLabel="Light"
                         rightLabel="Dark"
                         checked={theme === "dark"}
+                        hasScrolled={hasScrolled}
                         onChange={toggleTheme}
                         ariaLabel="Switch color theme"
                     />
@@ -171,6 +173,7 @@ export default function Navbar() {
                         leftLabel="En"
                         rightLabel="Es"
                         checked={language === "es"}
+                        hasScrolled={hasScrolled}
                         onChange={toggleLanguage}
                         ariaLabel="Switch language"
                     />
