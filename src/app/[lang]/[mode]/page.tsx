@@ -25,6 +25,17 @@ function isPortfolioType(value: string): value is PortfolioType {
   	return value === "web" || value === "games";
 }
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+    return [
+        { lang: "en", mode: "web" },
+        { lang: "en", mode: "games" },
+        { lang: "es", mode: "web" },
+        { lang: "es", mode: "games" },
+    ];
+}
+
 export default async function PortfolioPage({params}: PortfolioPageProps) {
   const { lang, mode } = await params;
 
