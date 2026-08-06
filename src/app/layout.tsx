@@ -39,7 +39,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="light"
-      className={`${geistSans.variable} ${geistMono.variable} ${Autography.variable} ${OldNewspaper.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${Autography.variable} ${OldNewspaper.variable} h-full antialiased scroll-smooth scroll-pt-10 selection:bg-primary selection:text-background`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
